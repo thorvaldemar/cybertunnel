@@ -1,5 +1,7 @@
-FROM node
+FROM --platform=linux/amd64 node:latest
+
+COPY . .
 
 RUN npm i
 
-CMD [ "npm", "start" ]
+CMD ["node", "webserver.js"]
